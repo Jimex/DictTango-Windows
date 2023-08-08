@@ -1,0 +1,8 @@
+{
+    "PluginCode":"bjjs-wfg",
+	"PluginName":"部件检索(WFG版)",
+	"Version":"0.9.7.0",
+	"WindowWidthPercentage": 90,
+	"WindowHeightPercentage": 80,
+    "HomePage":"index.htm"
+}

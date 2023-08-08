@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>部件檢索</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="./keyboard.css">
+    <link rel="stylesheet" href="css/font-awesome-all.min.css">
+    <style>
+        .BMP {
+            background-color: #E0E0E0;
+        }
+
+        .ExA {
+            background: #C0E8FF;
+        }
+
+        .ExB {
+            background: #FFF8D0;
+        }
+
+        .ExC {
+            background: #D1BADA;
+        }
+
+        .ExD {
+            background: #80FFB0;
+        }
+
+        .ExE {
+            background: #FFC0D0;
+        }
+
+        .ExF {
+            background: #90E0D0;
+        }
+
+        .ExG {
+            background: #CBD0FF;
+        }
+
+        .ExH {
+            background: #FEE0FD;
+        }
+
+        .CMP {
+            background: #FFFFFF;
+        }
+
+        .SUP {
+            background: #FCC800;
+        }
+
+        .OTH {
+            background: #808080;
+        }
+
+        .Decmp {
+            color: #0045FF !important;
+        }
+
+        .Fuzzy {
+            color: #404040 !important;
+        }
+
+        .Exact {
+            color: #FF4500 !important;
+        }
+
+        .out-char-block {
+            border: 1px solid #C0C0C0;
+            padding: 0px 1px 2px 1px;
+        }
+
+        .word-input-box-container {
+            display: inline-block;
+            border-color: #dad5d5;
+            border-width: 0;
+            height: 50px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #fff;
+            box-sizing: content-box;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .word-input-box-container input {
+            height: 50px;
+            border: none !important;
+            border-color: transparent !important;
+            outline: none;
+        }
+
+        .word-input-box-container button {
+            height: 30px;
+            width: 30px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .word-output-container {
+            width: 100%;
+            height: 1.3em;
+            overflow: hidden;
+            border-color: #dad5d5;
+            border-width: 0;
+            font-size: 1.5em;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 3px;
+            cursor: pointer;
+            background-color: #fff;
+            box-sizing: content-box;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .word-output-container.open {
+            height: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .word-output {
+            margin-right: 30px;
+        }
+
+        .button-show-all {
+            float: right;
+            margin-right: 5px;
+            margin-top: 5px;
+            z-index: 2;
+            display: flex;
+            height: 21px;
+            width: 21px;
+            color: #a3a0a0;
+            font-size: 16px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .button-show-all.open .arrow-dwn {
+            transform: rotate(-180deg);
+        }
+    </style>
+</head>
+
+<body onkeydown="onKeyDown(event)">
+    <!----------------------------------------------------------------------------->
+    <!-- 客製化修改區起始 -->
+    <!----------------------------------------------------------------------------->
+
+    <!-- UI 畫面區 -->
+    <div class="keyboard">
+        <div class="functon-row top-row">
+            <div class="word-input-box-container">
+                <input class="word-input-box" id="input" placeholder="部件" ></input>&nbsp;
+                <button class="Button" title="清除" onclick="ClearFind()"><i class="fa-solid fa-xmark"></i></button>
+                <button class="Button" title="倒退" onclick="Backspace()"><i class="fa-solid fa-delete-left"></i></button>
+                <button class="Button" title="解構" onclick="Decompose()"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <button class="Button" title="獨體" onclick="ClearFind();Key('#')"><b>#</b></button>
+                <button class="Button" title="查詢" onclick="FindMatch(0, false)"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+            <span style="display: none;">
+                <span class="LabelB">字數</span>：<span id="counter"></span>
+            </span>
+
+            <!-- 选项菜单 -->
+            <div class="menu-container">
+                <div id="button-settings" class="select-btn">
+                    <span class="btn-text">選項</span>
+                    <span class="arrow-dwn">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                </div>
+
+                <ul class="list-items">
+                    <li class="item" id="variant" onclick="OnVar()">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">包容異體</span>
+                    </li>
+                    <li class="item" id="subdivide" onclick="OnSdv()">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">無理拆分</span>
+                    </li>
+                    <!--
+                    <li class="item" id="ucodeonly" onclick="OnUco()">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">限標準字</span>
+                    </li>
+                  
+                    <li class="item" id="onthefly" onclick="OnFly()">
+                        <span class="checkbox">
+                            <i class="fa-solid fa-check check-icon"></i>
+                        </span>
+                        <span class="item-text">即時查詢</span>
+                    </li>
+                    -->
+                    <li class="item" id="button-reset-data" onclick="prepareData(true)">
+                        <span class="item-text">重新生成數據</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- 过滤菜单   -->
+            <div class="menu-container" style="margin-right: 10px;">
+                <div class="select-btn">
+                    <span class="btn-text">過濾</span>
+                    <span class="arrow-dwn">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                </div>
+
+                <ul class="list-items">
+                    <li class="item  BMP" id="li-search-block-BMP" onclick="toggleSearchBlock('BMP')"><span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span><span class="item-text">基本</li>
+                    <li class="item  ExA" id="li-search-block-ExA" onclick="toggleSearchBlock('ExA')"><span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span><span class="item-text">A區</li>
+                    <li class="item  ExB" id="li-search-block-ExB" onclick="toggleSearchBlock('ExB')"><span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span><span class="item-text">B區</li>
+                    <li class="item  ExC" id="li-search-block-ExC" onclick="toggleSearchBlock('ExC')"><span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span><span class="item-text">C區</li>
+                    <li class="item  ExD" id="li-search-block-ExD" onclick="toggleSearchBlock('ExD')"><span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span><span class="item-text">D區</li>
+                    <li class="item  ExE" id="li-search-block-ExE" onclick="toggleSearchBlock('ExE')"><span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span><span class="item-text">E區</li>
+                    <li class="item  ExF" id="li-search-block-ExF" onclick="toggleSearchBlock('ExF')"><span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span><span class="item-text">F區</li>
+                    <li class="item  ExG" id="li-search-block-ExG" onclick="toggleSearchBlock('ExG')"><span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span><span class="item-text">G區</li>
+                    <li class="item  ExH" id="li-search-block-ExH" onclick="toggleSearchBlock('ExH')"><span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span><span class="item-text">H區</li>
+                    <li class="item  CMP" id="li-search-block-CMP" onclick="toggleSearchBlock('CMP')"><span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span><span class="item-text">相容</li>
+                    <li class="item  SUP" id="li-search-block-SUP" onclick="toggleSearchBlock('SUP')"><span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span><span class="item-text">補充</li>
+                    <li class="item  OTH" id="li-search-block-OTH" onclick="toggleSearchBlock('OTH')"><span class="checkbox"><i class="fa-solid fa-check check-icon"></i></span><span class="item-text">其他</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="functon-row second-row">
+            <div class="word-output-container">
+                <div id="button-show-all" class="button-show-all" title="顯示全部">
+                    <span class="arrow-dwn">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </span>
+                </div>
+                <div class="word-output" id="output">&nbsp;</div>
+
+            </div>
+        </div>
+        <div id="leftKeyboard" class="section left">
+        </div>
+        <div id="rightKeyboard" class="section right">
+        </div>
+        <div class="functon-row bottom-row">
+            <div style='display:block;text-align:right'><span><span>部件檢索 - </span><span>198806</span>字</span> <small>核心版本：<span id="version"></span></small> <small>發布網址：<a href="http://fgwang.blogspot.tw/2015/12/blog-post_30.html" target="_blank">部件檢索</a> (WFG製作)</small></div>
+        </div>
+    </div>
+    <div id="loading-mask" class="ring" style="display:none;">
+        <span id="loading-mask-text"></span>
+    </div>
+    <!-- UI 程式區 -->
+    <script type="text/javascript">
+        var serverUrl = "<TANGO_API_URL>";
+    </script>
+    <script type="text/javascript" src="http://tangoapi.localhost:16332/TangoAPI.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="ui.js"></script>
+    <script type="text/javascript" src="menu.js"></script>
+    <!----------------------------------------------------------------------------->
+    <!-- 核心程式區 -->
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="core.js"></script>
+    <script type="text/javascript" src="core_tango.js"></script>
+
+    <!----------------------------------------------------------------------------->
+</body>
+
+</html>
