@@ -350,21 +350,65 @@ function getFilterBlocksQueryCondition() {
 }
 function sendWord(word) {
     try {
+        var json = {
+            "Event": 'SendWord',
+            "Content": word
+        };
         if (chrome) {
             if (chrome.webview) {
-                var json = {
-                    "Event": 'SendWord',
-                    "Content": word
-                };
+               
                 chrome.webview.postMessage(JSON.stringify(json));
             }
+        }
+        if(window.androidJsBridge)
+        {
+            window.androidJsBridge.postMessage(JSON.stringify(json));
         }
     }
     catch (e) {
         alert(e.message);
     }
 }
-
+function performBackspace() {
+    try {
+        var json = {
+            "Event": 'Backspace'
+        };
+        if (chrome) {
+            if (chrome.webview) {
+              
+                chrome.webview.postMessage(JSON.stringify(json));
+            }
+        }
+        if(window.androidJsBridge)
+        {
+           window.androidJsBridge.postMessage(JSON.stringify(json));
+        }
+    }
+    catch (e) {
+        alert(e.message);
+    }
+}
+function performDeleteWord() {
+    try {
+        var json = {
+            "Event": 'DeleteWord'
+        };
+        if (chrome) {
+            if (chrome.webview) {
+              
+                chrome.webview.postMessage(JSON.stringify(json));
+            }
+        }
+        if(window.androidJsBridge)
+        {
+           window.androidJsBridge.postMessage(JSON.stringify(json));
+        }
+    }
+    catch (e) {
+        alert(e.message);
+    }
+}
 // 實體按鍵改變
 var onKeyDown = function (event) {
     var activeElement = document.activeElement;
@@ -387,36 +431,12 @@ var onKeyDown = function (event) {
         switch (event.code) {
             case 'Backspace':
                 if (event.altKey) {
-                    try {
-                        if (chrome) {
-                            if (chrome.webview) {
-                                var json = {
-                                    "Event": 'Backspace'
-                                };
-                                chrome.webview.postMessage(JSON.stringify(json));
-                            }
-                        }
-                    }
-                    catch (e) {
-                        alert(e.message);
-                    }
+                   performDeleteWord();
                 }
                 break;
             case 'Delete':
                 if (event.altKey) {
-                    try {
-                        if (chrome) {
-                            if (chrome.webview) {
-                                var json = {
-                                    "Event": 'DeleteWord'
-                                };
-                                chrome.webview.postMessage(JSON.stringify(json));
-                            }
-                        }
-                    }
-                    catch (e) {
-                        alert(e.message);
-                    }
+                    performDeleteWord();
                 }
                 break;
             case 'Escape': //ESC
