@@ -1,4 +1,8 @@
-**Initial Installation**  
+
+# DictTango Windows / DictTango Windows版
+
+## Installation
+### Initial Installation
 1. Download the program file and extract it to your hard drive.  
 2. Right-click on `Install.ps1` and select “Run with PowerShell.”  
 3. The program requires the .NET Desktop Runtime. For the first installation, download and install the .NET 8 runtime from the following link before proceeding:
@@ -11,16 +15,16 @@ If running the `Install.ps1` script fails or exits immediately, enable the follo
 
 
 
-**Subsequent Update Installation**  
+###Subsequent Update Installation**  
 For future updates, simply double-click the MSIX file in the installation package to proceed with the update installation.
 ![image](https://github.com/user-attachments/assets/985406cb-a6fa-4569-a848-a226c53cd736)
 
 ![image](https://github.com/user-attachments/assets/b01cc18a-4259-4bc0-9c75-f94eaa8f2383)
 
 
-# 安装方法
+## 安装方法
 
-## 初次安装
+### 初次安装
 
 1. 下载程序文件并解压到硬盘上
 2. 右键单击Install.ps1, 然后选择 “Run with PowerShell”
@@ -36,7 +40,7 @@ For future updates, simply double-click the MSIX file in the installation packag
 
     
 
-## 后续更新安装
+### 后续更新安装
 
 后续的安装直接双击安装包中的MSIX文件就可以进行更新安装页面。
 
