@@ -22,6 +22,10 @@ For future updates, simply double-click the MSIX file in the installation packag
 ![image](https://github.com/user-attachments/assets/b01cc18a-4259-4bc0-9c75-f94eaa8f2383)
 
 
+## DictTango Android Version
+https://github.com/Jimex/DictTango-Android
+
+
 ## 安装方法
 
 ### 初次安装
@@ -38,7 +42,6 @@ For future updates, simply double-click the MSIX file in the installation packag
 
 ![image](https://github.com/user-attachments/assets/9a609469-6edc-440c-8885-f5c58cc8153b)
 
-    
 
 ### 后续更新安装
 
@@ -47,3 +50,6 @@ For future updates, simply double-click the MSIX file in the installation packag
 ![image](https://github.com/user-attachments/assets/985406cb-a6fa-4569-a848-a226c53cd736)
 
 ![image](https://github.com/user-attachments/assets/b01cc18a-4259-4bc0-9c75-f94eaa8f2383)
+
+## DictTango 安卓版
+https://github.com/Jimex/DictTango-Android
