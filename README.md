@@ -15,7 +15,7 @@ If running the `Install.ps1` script fails or exits immediately, enable the follo
 
 
 
-###Subsequent Update Installation**  
+### Subsequent Update Installation
 For future updates, simply double-click the MSIX file in the installation package to proceed with the update installation.
 ![image](https://github.com/user-attachments/assets/985406cb-a6fa-4569-a848-a226c53cd736)
 
