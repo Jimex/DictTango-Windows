@@ -7,7 +7,7 @@
 
 - Fixed the issue where the window could not be dragged after resizing
 - Fixed some other minor issues
-- Upgraded Windows UI components to version 1.3.7
+- Upgraded Windows UI components to version 1.7.0
 
 
 # 1.3.5.0 
