@@ -1,3 +1,11 @@
+# 1.3.7
+
+日期: 2025年05月03日
+-添加了MCP服务，供AI进行实时词典内容查询
+
+Date: May 3, 2025
+- Added MCP service for AI to perform real-time dictionary lookups.
+
 # 1.3.6.0 
 日期: 2025年05月03日
 - 解决了窗口放大缩小后不能拖动的问题
