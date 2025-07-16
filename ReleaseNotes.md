@@ -1,3 +1,16 @@
+# 1.3.9
+日期: 2025年07月16日
+- 优化词典服务的负载能力，提升输出速度
+- 优化mdx的查词速度(大概提升20%-30%)，减少了内存占用
+- 优化了暗黑模式下的界面显示
+- 修复了关闭窗口后再打开时背景材质不显示的问题
+ 
+Date: July 16, 2025
+- Optimized the dictionary service to handle higher loads and improved output speed
+- Improved lookup speed in MDX and reduced memory usage
+- Enhanced the interface display in dark mode
+- Fixed an issue where the background texture wouldn’t appear after reopening the window
+  
 # 1.3.8
 日期: 2025年07月14日
 - 优化了mdx的读取性能
