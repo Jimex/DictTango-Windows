@@ -9,7 +9,7 @@ Date: July 16, 2025
 - Optimized the dictionary service to handle higher loads and improved output speed
 - Improved lookup speed in MDX and reduced memory usage
 - Enhanced the interface display in dark mode
-- Fixed an issue where the background texture wouldn’t appear after reopening the window
+- Fixed an issue where the backdrop wouldn’t take effect after reopening the window from system tray
   
 # 1.3.8
 日期: 2025年07月14日
