@@ -1,3 +1,19 @@
+# 1.5.0
+日期: 2025年07月22日
+- 添加了高透光亚克力材质
+- 修复了鼠标移到顶部栏按钮时，背景不变色的问题
+- 修复了一些界面小问题
+
+English:
+- Added acrylic thin backdrop
+- Fixed an issue where the background did not change color when hovering over the top bar buttons with the mouse
+- Fixed some minor UI issues
+
+
+- 新增高透光壓克力材質
+- 修復滑鼠移到頂部欄按鈕時背景不變色的問題
+- 修復一些介面上的小問題
+- 
 # 1.3.9
 日期: 2025年07月16日
 - 优化词典服务的负载能力，提升输出速度
