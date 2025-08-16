@@ -1,3 +1,40 @@
+# v1.5.1.0
+
+## English
+
+1. Fixed an issue where dictionary files could not be copied when opening DictTango
+2. Fixed an issue where the dictionary did not jump correctly in reading mode if it was not in the current group
+3. Added global CSS file support
+
+   * File name should be `global.css` or `global_<theme>.css`, placed under `C:\ProgramData\JimexStudio\DictTango\UserAssets`
+   * Theme-specific CSS loads first; if not found, fallback to `global.css`.
+     Example: if the current theme is dark mode, the app will look for `global_dark.css`; if not found, it will load `global.css`.
+
+---
+
+## 简体中文
+
+1. 修正了打开 DictTango 时，词典文件不能复制的问题
+2. 修复了阅读模式下词典不在当前分组时的跳转问题
+3. 添加全局 CSS 文件功能
+
+   * 文件名为 `global.css` 或 `global_<主题>.css`，放在 `C:\ProgramData\JimexStudio\DictTango\UserAssets`
+   * 主题相关的 CSS 会优先加载，如果没有，则加载 `global.css`。
+     例如当前主题为暗黑模式，会优先寻找 `global_dark.css`；如果找不到，则加载 `global.css`。
+
+---
+
+## 繁體中文
+
+1. 修正了開啟 DictTango 時，詞典檔案無法複製的問題
+2. 修復了閱讀模式下詞典不在當前分組時的跳轉問題
+3. 添加全域 CSS 檔案功能
+
+   * 檔名為 `global.css` 或 `global_<theme>.css`，放在 `C:\ProgramData\JimexStudio\DictTango\UserAssets`
+   * 主題相關的 CSS 會優先載入，若找不到，則載入 `global.css`。
+     例如當前主題為暗黑模式，會優先尋找 `global_dark.css`；若找不到，則載入 `global.css`。
+
+
 # 1.5.0
 日期: 2025年07月22日
 - 添加了高透光亚克力材质
