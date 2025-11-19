@@ -1,6 +1,19 @@
 # v1.5.1.0
 
-## English
+Update runtime to .net 10
+
+Here are the translations:
+
+**Simplified Chinese（简体中文）**
+
+* 更新到 .NET 10
+
+**Traditional Chinese（繁體中文）**
+
+* 更新到 .NET 10
+
+
+# v1.5.1.0
 
 1. Fixed an issue where dictionary files could not be copied when opening DictTango
 2. Fixed an issue where the dictionary did not jump correctly in reading mode if it was not in the current group
