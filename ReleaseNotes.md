@@ -1,4 +1,4 @@
-# v1.5.1.0
+# v1.6.0.0
 
 Update runtime to .net 10
 
