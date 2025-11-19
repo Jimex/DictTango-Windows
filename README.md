@@ -5,9 +5,9 @@
 ### Initial Installation
 1. Download the program file and extract it to your hard drive.  
 2. Right-click on `Install.ps1` and select “Run with PowerShell.”  
-3. The program requires the .NET Desktop Runtime. For the first installation, download and install the .NET 8 runtime from the following link before proceeding:
+3. The program requires the .NET Desktop Runtime. For the first installation, download and install the .NET 10 runtime from the following link before proceeding:
    - **.NET Desktop Runtime Installation**  
-     1) [https://dotnet.microsoft.com/en-us/download/dotnet/8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)  
+     1) https://dotnet.microsoft.com/en-us/download/dotnet/10.0
      2) Download and install the .NET Desktop Runtime.  
 
 If running the `Install.ps1` script fails or exits immediately, enable the following option. If it still doesn’t work, you may need to enable Developer Options.
@@ -32,11 +32,11 @@ https://github.com/Jimex/DictTango-Android
 
 1. 下载程序文件并解压到硬盘上
 2. 右键单击Install.ps1, 然后选择 “Run with PowerShell”
-3. 程序需要 .Net8 桌面运行时支持，首次安装时请从以下网址下载对应的 .Net 8运行时组件安装后再打开
+3. 程序需要 .Net 10 桌面运行时支持，首次安装时请从以下网址下载对应的 .Net 10运行时组件安装后再打开
 
-.Net 8 桌面程序运行时 / .NET Desktop Runtime
+.Net 10 桌面程序运行时 / .NET Desktop Runtime
 
-访问 [https://dotnet.microsoft.com/en-us/download/dotnet/8.0， 179](https://dotnet.microsoft.com/en-us/download/dotnet/8.0%EF%BC%8C) 然后下载 .NET Desktop Runtime
+访问 https://dotnet.microsoft.com/en-us/download/dotnet/10.0 然后下载 .NET Desktop Runtime
 
 如果运行Install.ps1脚本失败或者一闪而退，要开启以下的选项, 如果开启此选项还是不行，可能要启用开发人员选项
 
