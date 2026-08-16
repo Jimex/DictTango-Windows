@@ -1,4 +1,105 @@
-v1.7.0
+# v1.7.1
+
+---
+
+## ENGLISH
+
+### What's New
+DictTango AI Hub brings intelligent AI-powered features to your dictionary:
+- **AI ChatBot**: Chat with AI assistants (DeepSeek, Google Gemini, OpenAI, etc.)
+- **AI Browser**: Browse web pages while chatting with AI about the content
+- **Ask AI**: Right-click text to get AI insights about selected words
+- **AI Dictionaries**: Create AI-powered dictionaries that generate definitions on-the-fly
+- **Prompt Management**: Save and organize AI prompts for reuse
+
+### Quick Start
+1. Go to AI Hub in the main menu
+2. Add an AI Service (Services tab) - enter your API details and test
+3. Start chatting in ChatBot tab
+4. Try AI Browser to browse & chat at the same time
+5. Right-click dictionary text to use "Ask AI"
+
+### Key Features
+- ✨ Real-time streaming responses
+- 🌍 Multiple AI service support
+- 📝 Markdown-to-HTML rendering
+- 💾 Optional result caching
+- 🖥️ Modern clean design
+- 🌐 English, Simplified Chinese, Traditional Chinese support
+
+### Requirements
+- Windows 10.0.22621.0+
+- .NET 10.0
+- x64 architecture
+- Internet connection for AI services
+
+---
+
+## 简体中文
+
+### 新增功能
+DictTango AI 中心为您的字典带来智能 AI 功能：
+- **AI 聊天机器人**：与 AI 助手聊天（DeepSeek、Google Gemini、OpenAI 等）
+- **AI 浏览器**：边浏览网页边与 AI 聊天页面内容
+- **对选中文本提问 AI**：右键点击文本获取 AI 见解
+- **AI 字典**：创建 AI 字典，即时生成定义
+- **提示词管理**：保存和整理 AI 提示词以供重复使用
+
+### 快速开始
+1. 在主菜单中打开 AI 中心
+2. 添加 AI 服务（AI 服务选项卡）- 输入 API 信息并测试
+3. 在聊天机器人选项卡中开始聊天
+4. 尝试 AI 浏览器同时浏览和聊天
+5. 右键点击字典文本使用"提问 AI"
+
+### 主要功能
+- ✨ 实时流式响应
+- 🌍 支持多个 AI 服务
+- 📝 Markdown 到 HTML 渲染
+- 💾 可选结果缓存
+- 🖥️ 现代简洁设计
+- 🌐 支持英文、简体中文、繁体中文
+
+### 系统要求
+- Windows 10.0.22621.0+
+- .NET 10.0
+- x64 架构
+- 需要网络连接以调用 AI 服务
+
+---
+
+## 繁體中文
+
+### 新增功能
+DictTango AI 中心為您的字典帶來智能 AI 功能：
+- **AI 聊天機器人**：與 AI 助手聊天（DeepSeek、Google Gemini、OpenAI 等）
+- **AI 瀏覽器**：邊瀏覽網頁邊與 AI 聊天頁面內容
+- **對選中文字提問 AI**：右鍵點擊文字獲取 AI 見解
+- **AI 字典**：建立 AI 字典，即時產生定義
+- **提示詞管理**：儲存和整理 AI 提示詞以供重複使用
+
+### 快速開始
+1. 在主功能表中開啟 AI 中心
+2. 新增 AI 服務（AI 服務索引標籤）- 輸入 API 資訊並測試
+3. 在聊天機器人索引標籤中開始聊天
+4. 嘗試 AI 瀏覽器同時瀏覽和聊天
+5. 右鍵點擊字典文字使用「提問 AI」
+
+### 主要功能
+- ✨ 即時串流響應
+- 🌍 支援多個 AI 服務
+- 📝 Markdown 到 HTML 呈現
+- 💾 可選結果快取
+- 🖥️ 現代簡潔設計
+- 🌐 支援英文、簡體中文、繁體中文
+
+### 系統要求
+- Windows 10.0.22621.0+
+- .NET 10.0
+- x64 架構
+- 需要網路連線以呼叫 AI 服務
+
+# v1.7.0
 
 ### **English**
 
