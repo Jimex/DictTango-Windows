@@ -1,3 +1,26 @@
+# v1.7.3 Portable
+---
+### English
+
+1. **Portable version, no installation required**
+2. **Customizable app data folder** — If you already have the installed version, you can move the files from `C:\ProgramData\JimexStudio\DictTango` to another folder and then select that folder as the app data folder. Alternatively, you can directly use `C:\ProgramData\JimexStudio\DictTango` as the app data folder.
+3. **Group dictionaries by subfolders when scanning** — When scanning dictionaries, they can be grouped according to the subfolders within the selected scan folder.
+4. **Configure `Ctrl+C` as the hotkey for word lookup** — In Settings, set the hotkey to `Ctrl+C`. You can then press `Ctrl+C` twice (`Ctrl+C` + `C`) to look up a word.
+
+### 简体中文
+1.  绿色版本，免安装
+2.  可以自定义app数据文件夹，如果已经有安装版，可以把C:\ProgramData\JimexStudio\DictTango里面的文件移到另外一个文件夹，然后再选择这个文件作为app数据文件夹，当然直接选择C:\ProgramData\JimexStudio\DictTango作为app数据文件夹也行
+3. 扫描词典时，可以根据扫描文件夹的次级文件夹进行分组
+4. 在设置把配置热键为CTRL+C, 可以实现按Ctrl+CC取词
+   
+### 繁體中文
+
+1. **綠色免安裝版本**
+2. **可自訂 App 資料夾** — 如果已經有安裝版，可以將 `C:\ProgramData\JimexStudio\DictTango` 裡的檔案移到其他資料夾，然後將該資料夾選為 App 資料夾。當然，也可以直接將 `C:\ProgramData\JimexStudio\DictTango` 設定為 App 資料夾。
+3. **掃描詞典時可依子資料夾進行分組** — 掃描詞典時，可以根據掃描資料夾下的子資料夾進行分組。
+4. **將 `Ctrl+C` 設定為取詞熱鍵** — 在設定中將熱鍵設為 `Ctrl+C`，即可透過連續按兩次 `Ctrl+C`（`Ctrl+C` + `C`）來取詞。
+
+
 # v1.7.2
 
 ---
