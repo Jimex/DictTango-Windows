@@ -11,7 +11,7 @@
 1.  绿色版本，免安装
 2.  可以自定义app数据文件夹，如果已经有安装版，可以把C:\ProgramData\JimexStudio\DictTango里面的文件移到另外一个文件夹，然后再选择这个文件作为app数据文件夹，当然直接选择C:\ProgramData\JimexStudio\DictTango作为app数据文件夹也行
 3. 扫描词典时，可以根据扫描文件夹的次级文件夹进行分组
-4. 在设置把配置热键为CTRL+C, 可以实现按Ctrl+CC取词
+4. 在设置把配置热键为CTRL+C, 可以实现按两次`Ctrl+C`（`Ctrl+C` + `C`）取词
    
 ### 繁體中文
 
