@@ -1,3 +1,22 @@
+# v1.7.6 Portable
+
+### English
+1. Support screen text selection and lookup (enable it in Settings)
+2. Improved the floating window
+3. Synchronized the word lookup sorting rules with the Android version
+
+### 简体中文
+1. 支持屏幕取词（在设置中启用)
+2. 优化浮动窗口
+3. 同步安卓版的查词排序规则
+   
+### 繁體中文
+
+1. 支援螢幕取詞（可在設定中啟用）
+2. 優化浮動視窗
+3. 與 Android 版本同步查詞排序規則
+
+
 # v1.7.3 Portable
 ---
 ### English
